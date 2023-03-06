@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:storeapp/utils/snackbar.dart';
 
 enum Category { Shoes, Bags, Clothes, Accessory }
 
@@ -22,8 +23,13 @@ class MyApp extends StatelessWidget {
 class StoreMain extends StatelessWidget {
   const StoreMain({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
+    var msg = {
+
+    };
+
     return Scaffold(
         body: SafeArea(
       child: Column(
@@ -34,7 +40,7 @@ class StoreMain extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {
-
+                    showSnackBar(context, "msg");
                   },
                   child: const Text("Shoes",
                       style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
@@ -58,13 +64,3 @@ class StoreMain extends StatelessWidget {
   }
 }
 
-void showToast(String message){
-  Fluttertoast.showToast(
-    msg: message,
-    gravity: ToastGravity.BOTTOM,
-    backgroundColor: Colors.redAccent,
-    //fontSize: 20
-    textColor: Colors.white,
-    toastLength: Toast.LENGTH_SHORT
-  );
-}
