@@ -5,8 +5,8 @@ import 'package:storeapp/utils/snackbar.dart';
 enum Category { Shoes, Bags, Clothes, Accessory }
 
 
-class StoreMain extends StatelessWidget {
-  const StoreMain({Key? key}) : super(key: key);
+class StoreUi extends StatelessWidget {
+  const StoreUi({Key? key}) : super(key: key);
 
 
   @override
